@@ -30,7 +30,10 @@ local.properties
 
 
 # Java class
-.class
+*.class
+
+# executable
+*.exe
 
 #################
 ## Visual Studio
