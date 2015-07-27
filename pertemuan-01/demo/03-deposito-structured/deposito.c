@@ -24,20 +24,32 @@ double hitungbunga(long nominal, int jangkawaktu){
 		return 0;
 }
 
+double hitungsaldoakhir(long nominal, int jangkawaktu){
+	double bunga = hitungbunga(nominal, jangkawaktu);
+	double saldoakhir = nominal + bunga;
+	return saldoakhir;
+}
+
 int main(){
+	//perhitungan deposito
+	//nominal = Rp. 1.000.000, 12 bulan
 	long nominal1 = 1000000;
 	int jangkawaktu1 = 12;
 	double bunga1 = hitungbunga(nominal1, jangkawaktu1);
+	double saldoakhir1 = hitungsaldoakhir(nominal1, jangkawaktu1);
 	printf("Deposito Rp. %ld dengan jangka waktu %d bulan\n", nominal1, jangkawaktu1);
 	printf("Bunga: Rp. %.2f\n", bunga1);
-	printf("Saldo akhir bulan ke-%d: Rp. %.2f\n", jangkawaktu1, nominal1+bunga1);
+	printf("Saldo akhir bulan ke-%d: Rp. %.2f\n", jangkawaktu1, saldoakhir1);
 	
+	//perhitungan deposito
+	//nominal = Rp. 5.000.000, 1 bulan
 	long nominal2 = 5000000;
 	int jangkawaktu2 = 1;
 	double bunga2 = hitungbunga(nominal2, jangkawaktu2);
+	double saldoakhir2 = hitungsaldoakhir(nominal2, jangkawaktu2);
 	printf("Deposito Rp. %ld dengan jangka waktu %d bulan\n", nominal2, jangkawaktu2);
 	printf("Bunga: Rp. %.2f\n", bunga2);
-	printf("Saldo akhir bulan ke-%d: Rp. %.2f\n", jangkawaktu2, nominal2+bunga2);
+	printf("Saldo akhir bulan ke-%d: Rp. %.2f\n", jangkawaktu2, saldoakhir2);
 	
 	return 0;
 }

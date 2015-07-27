@@ -14,7 +14,7 @@ public class Deposito {
 		jangkawaktu = jatuhtempo;
 	}
 
-	private double hitungBunga(){
+	public double hitungBunga(){
 		if(jangkawaktu == 1 || jangkawaktu == 3){
 			return jangkawaktu/12.0 * nominal * 4.95/100;
 		}
@@ -31,20 +31,21 @@ public class Deposito {
 			return 0;
 	}
 
-	public void cetakInfo(){
-		System.out.println("Deposito Rp. " + nominal + " dengan jangka waktu " + jangkawaktu + " bulan");
-		System.out.println("Jatuh tempo dalam: " + jangkawaktu + " bulan");
+	public double hitungSaldoAkhir(){
 		double bunga = hitungBunga();
-		double saldoAkhir = nominal + bunga;
-		System.out.println("Bunga: Rp. " + bunga);
-		System.out.println("Saldo akhir bulan ke-" + jangkawaktu + " Rp. " + saldoAkhir);
+		double saldoakhir = nominal + bunga;
+		return saldoakhir;
 	}
 
 	public static void main(String[] args) {
 		Deposito d1 = new Deposito(1000000, 12);
-		d1.cetakInfo();
+		System.out.println("Deposito Rp. 1000000 dalam 12 bulan");
+		System.out.println("Bunga: Rp. " + d1.hitungBunga());
+		System.out.println("Saldo akhir bulan ke 12: Rp. " + d1.hitungSaldoAkhir());
 
 		Deposito d2 = new Deposito(5000000, 1);
-		d2.cetakInfo();
+		System.out.println("Deposito Rp. 5000000 dalam 1 bulan");
+		System.out.println("Bunga: Rp. " + d2.hitungBunga());
+		System.out.println("Saldo akhir bulan ke 1: Rp. " + d2.hitungSaldoAkhir());
 	}
 }
