@@ -1,5 +1,5 @@
 /*
-	Demo PBO 01
+	Demo 03 | Pertemuan 01
 	Deposito dengan structured programming
 
 	dibuat oleh yuanlukito[at]ti.ukdw.ac.id

@@ -1,5 +1,5 @@
 /*
-	Demo PBO 01
+	Demo 04 | Pertemuan 01
 	Deposito dengan OOP
 	Membuat object dari class Deposito dari class yang lain
 
